@@ -40,8 +40,10 @@ E) Exception at runtime
     }
   }
 
-Y y = new Z();
-System.out.println(y.sayHi() + ", " +y.sayHi2());
+Y y = new Z();  // a Z "is a" Y
+System.out.println(y.sayHi() + ", " + y.sayHi2());
+// equivalent to:
+//System.out.println(Y.sayHi() + ", " + y.sayHi2());
 
 What is the result?
     A) Y-Hello, Y-Hello2
