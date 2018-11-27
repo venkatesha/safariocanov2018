@@ -74,3 +74,118 @@ y    B) doBaseStuff in Base can be marked private without causing errors
 y    C) doBaseStuff in Sub can be marked public without causing errors
 y    D) doBaseStuff in Sub can be marked protected without causing errors
 n    E) doBaseStuff in Sub can be marked private without causing errors
+
+4)
+Given
+  class Base {
+    int doBaseStuff() {
+      System.out.println("doBaseStuff");
+      return 1;
+    }
+  }
+  class Sub extends Base {
+    // Line n1
+  }
+
+Which may be defined at the point marked Line n1
+A) int doBaseStuff() {return 2;}
+B) short doBaseStuff() { return (short)2;}
+C) String doBaseStuff() { return "Hello";}
+D) String doBaseStuff(int x) { return "Hello";}
+
+5)
+Given:
+  String s;
+
+How much memory is allocated?
+A) None
+B) 4 bytes
+C) enough for one String object
+
+6)
+Given
+String s1 = new String("Hello");
+String s2 = new String("Hello");
+StringBuilder s3 = new StringBuilder("Hello");
+StringBuilder s4 = new StringBuilder("Hello");
+
+which are true?
+A) s1 == s2
+B) s1.equals(s2)
+C) s1.equals(s3)
+D) s3.equals(s4)
+E) s3 == s4
+
+7)
+Given
+String s1 = "Hello";
+String s2 = "Hello";
+String s3 = new String("Hello");
+Which are true?
+A) s1 == s2
+B) s2 == s3
+C) s1 == s3
+
+8)
+Given
+ public void q11A(int x) {
+   x = x + 1;
+ }
+and:
+int x = 99;
+q11A(x);
+System.out.println(x);
+
+What is the result
+    A) 99
+    B) 100
+    C) An error
+
+9)
+  public void q12A(StringBuilder x) {
+    x.append(" world");
+  }
+
+StringBuilder x = new StringBuilder("Hello");
+q12A(x);
+System.out.println(x);
+
+What is the result?
+    A) Hello
+    B) Hello world
+    C)  world
+    D) An error
+
+10)
+  public void q12A(String x) {
+    x.concat(" world");
+  }
+
+String x = new String("Hello");
+q12A(x);
+System.out.println(x);
+
+What is the result?
+    A) Hello
+    B) Hello world
+    C)  world
+    D) An error
+
+Q11)
+  public void q12A(String x) {
+    x = x.concat(" world");
+  }
+
+String x = new String("Hello");
+q12A(x);
+System.out.println(x);
+
+What is the result?
+    A) Hello
+    B) Hello world
+    C)  world
+    D) An error
+
+
+
+
