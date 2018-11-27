@@ -51,3 +51,26 @@ What is the result?
     C) Z-Hello, Z-Hello2
     D) Z-Hello, Y-Hello2
     E) Compilation fails
+
+3)
+  class Base {
+    void doBaseStuff() {
+      System.out.println("doBaseStuff");
+    }
+  }
+
+  class Sub extends Base {
+    void doBaseStuff() {
+      System.out.println("doSubStuff");
+    }
+    void doOtherStuff() {
+      System.out.println("doOtherStuff");
+    }
+  }
+
+In the Base and Sub classes, which are true in isolation?
+x    A) doBaseStuff in Base can be marked public without causing errors
+y    B) doBaseStuff in Base can be marked private without causing errors
+y    C) doBaseStuff in Sub can be marked public without causing errors
+y    D) doBaseStuff in Sub can be marked protected without causing errors
+n    E) doBaseStuff in Sub can be marked private without causing errors
